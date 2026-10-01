@@ -1,5 +1,5 @@
-name: 'deploy-stack: AWS Fargate & Terraform Deploy'
-description: 'Deploy containerized web apps to AWS ECS Fargate via standard Terraform with zero vendor lock-in.'
+name: 'grada-action: AWS Fargate, Lambda & Terraform Deploy'
+description: 'Deploy containerized web apps and serverless functions to AWS via Grada-generated Terraform with zero vendor lock-in.'
 branding:
   icon: 'cloud'
   color: 'blue'
@@ -48,7 +48,7 @@ runs:
           -H "Content-Type: application/json" \
           -d "{
             \"api_key\": \"phc_o2wgA3jVT9rVDiGSDzFAR42zZeiVGhhCY53HXVHUcYGT\",
-            \"event\": \"gh_action_deploy\",
+            \"event\": \"grada_action_deploy\",
             \"distinct_id\": \"$REPO_HASH\",
             \"properties\": {
               \"runner_os\": \"${{ runner.os }}\"
